@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия - макет</title>
+   
+</head>
+<body>
+    <h1>ПУТЕШЕСТВИЯ</h1>
+    <p>навигация по блокам с якорями</p>
+
+   
+    <div>
+        <a href="#country">НАЗВАНИЕ СТРАНЫ</a> |
+        <a href="#map">Карта регионов</a> |
+        <a href="#description">Описание</a> |
+        <a href="#weather">Погода</a> |
+        <a href="#about">О нас/о стране</a> |
+        <a href="#form">Форма обратной связи</a> |
+        <a href="#faq">FAQ</a> |
+        <a href="#contacts">Контакты</a>
+    </div>
+
+    
+    <header id="country">
+        <h2>НАЗВАНИЕ СТРАНЫ</h2>
+        <p>блок &lt;header&gt;</p>
+        <p>стили для заголовков h1, h2, h3</p>
+    </header>
+
+  
+    <section id="map">
+        <h2>Карта регионов</h2>
+        <p>Кликабельное svg-изображение с возможностью выбора</p>
+        <p>+ анимация + мобилка</p>
+        
+       
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect x="10" y="10" width="80" height="80" fill="#ccc" stroke="#000" />
+            <rect x="100" y="10" width="80" height="80" fill="#ccc" stroke="#000" />
+            <rect x="190" y="10" width="80" height="80" fill="#ccc" stroke="#000" />
+            <rect x="280" y="10" width="80" height="80" fill="#ccc" stroke="#000" />
+            <text x="30" y="50">Регион 1</text>
+            <text x="120" y="50">Регион 2</text>
+            <text x="210" y="50">Регион 3</text>
+            <text x="300" y="50">Регион 4</text>
+        </svg>
+    </section>
+
+    
+    <section id="description">
+        <h2>Описание</h2>
+        <p>Красиво оформленный текст</p>
+        <p>стили для блока с текстом</p>
+        
+        
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+
+    
+    <section id="weather">
+        <h2>Погода</h2>
+        <p>желательно на карте, либо прогноз по регионам/городам</p>
+        <p>блок с min-height</p>
+        
+        
+        <div style="min-height: 200px; border: 1px dashed #999; padding: 10px;">
+            <table border="1" cellpadding="5">
+                <tr>
+                    <th>Регион</th>
+                    <th>Температура</th>
+                    <th>Осадки</th>
+                </tr>
+                <tr>
+                    <td>Северный</td>
+                    <td>-5°C</td>
+                    <td>Снег</td>
+                </tr>
+                <tr>
+                    <td>Центральный</td>
+                    <td>+12°C</td>
+                    <td>Облачно</td>
+                </tr>
+                <tr>
+                    <td>Южный</td>
+                    <td>+25°C</td>
+                    <td>Солнечно</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    
+    <section id="about">
+        <h2>О нас/о стране</h2>
+        <p>блок с цифрами, тезисно</p>
+        <p>стили с display:flex</p>
+        
+        
+        <div style="display: flex; gap: 20px; border: 1px solid #ccc; padding: 20px;">
+            <div style="flex: 1; text-align: center;">
+                <strong>15+</strong>
+                <p>Регионов</p>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <strong>50M</strong>
+                <p>Население</p>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <strong>1000+</strong>
+                <p>Достопримечательностей</p>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <strong>25</strong>
+                <p>Нац. парков</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="form">
+        <h2>Форма обратной связи / Задать вопрос</h2>
+        <p>форма для ввода и отправки текста</p>
+        <p>стили элементов управления</p>
+        
+        
+        <form>
+            <p>
+                <label>Имя: <input type="text" name="name"></label>
+            </p>
+            <p>
+                <label>Email: <input type="email" name="email"></label>
+            </p>
+            <p>
+                <label>Регион: 
+                    <select name="region">
+                        <option>Северный</option>
+                        <option>Центральный</option>
+                        <option>Южный</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>Вопрос: <textarea name="question" rows="4" cols="50"></textarea></label>
+            </p>
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+        </form>
+    </section>
+
+    
+    <section id="faq">
+        <h2>FAQ</h2>
+        <p>раскрывающие поля</p>
+        <p>обработка раскрывашек</p>
+        
+        
+        <details>
+            <summary>Какие документы нужны для въезда?</summary>
+            <p>Загранпаспорт, действительный не менее 6 месяцев.</p>
+        </details>
+        
+        <details>
+            <summary>Какая валюта используется?</summary>
+            <p>Местная валюта, но принимают и доллары.</p>
+        </details>
+        
+        <details>
+            <summary>Когда лучше ехать?</summary>
+            <p>С апреля по октябрь.</p>
+        </details>
+    </section>
+
+    
+    <footer id="contacts">
+        <h2>Контакты</h2>
+        <p>блок &lt;footer&gt;</p>
+        
+        <p>© 2025 Путешествия</p>
+        <p>Email: info@travel.ru</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+    </footer>
+
+</body>
+</html>
